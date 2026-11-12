@@ -1,29 +1,29 @@
-/* HEIST HQ 365 — case-file logic: evidence board, declassification, timeline filter, Case Files index.
+/* HEIST HQ 365, case-file logic: evidence board, declassification, timeline filter, Case Files index.
    Labeling discipline (from the GTA lane): CONFIRMED = official source; REPORT = credited reporting;
    RUMOR = community claim, never presented as fact. Fiction is labeled FICTION. */
 
 /* ===== CASE FILES (Guides hub) =====
    HOW TO ADD A GUIDE: append one object to this array.
    Fields: title, dek (one line), category, date, tag (small caps label under the card).
-   Guides are companions to the video coverage — keep the CONFIRMED/RUMOR discipline inside them. */
+   Guides are companions to the video coverage, keep the CONFIRMED/RUMOR discipline inside them. */
 var CASE_FILES = [
   {
     title: "Reading a Rockstar Trailer Like a Heist Board",
-    dek: "The desk's method, pinned out: how we break a trailer into exhibits — what's shown, what's said, what's conspicuously missing — and how each piece earns its label.",
+    dek: "The desk's method, pinned out: how we break a trailer into exhibits, what's shown, what's said, what's conspicuously missing, and how each piece earns its label.",
     category: "Method",
     date: "Oct 29, 2026",
     tag: "Launch entry · Companion guide"
   },
   {
     title: "Every Confirmed GTA VI Detail So Far",
-    dek: "The living confirmed file in one read: Leonida, Lucia and Jason, the November 19, 2026 date — only what Rockstar or an official source has actually put on the record.",
+    dek: "The living confirmed file in one read: Leonida, Lucia and Jason, the November 19, 2026 date, only what Rockstar or an official source has actually put on the record.",
     category: "The File",
     date: "Oct 29, 2026",
     tag: "Launch entry · Confirmed only"
   },
   {
     title: "Concept vs. Confirmed: How We Label Coverage",
-    dek: "Why some GTA videos say [CONCEPT] or [RUMOR] in the title, what each label promises you, and how a rumor graduates to the confirmed file — with receipts.",
+    dek: "Why some GTA videos say [CONCEPT] or [RUMOR] in the title, what each label promises you, and how a rumor graduates to the confirmed file, with receipts.",
     category: "Method",
     date: "Oct 29, 2026",
     tag: "Launch entry · Companion guide"
@@ -35,20 +35,20 @@ var EXHIBITS = [
   {
     file: "EXHIBIT A / ACTIVE LANE",
     title: "The GTA VI Watch",
-    body: "The desk's flagship beat: trailer breakdowns, official-announcement coverage, and the running confirmed file on Grand Theft Auto VI — Leonida, Lucia and Jason, and the road to <strong>November 19, 2026</strong>. Every video separates what Rockstar has confirmed from what the community believes, on screen, every time.",
+    body: "The desk's flagship beat: trailer breakdowns, official-announcement coverage, and the running confirmed file on Grand Theft Auto VI, Leonida, Lucia and Jason, and the road to <strong>November 19, 2026</strong>. Every video separates what Rockstar has confirmed from what the community believes, on screen, every time.",
     note: "METHOD: Commentary over credited official material. Speculation is labeled [CONCEPT] / [RUMOR] in titles and on screen."
   },
   {
     file: "EXHIBIT B / ORIGINAL WORK",
     title: "The Fiction File",
-    body: "Original heist stories written and narrated by the desk — crews, scores, double-crosses — including the serialized piece <strong>“The Tenth Painting.”</strong> These are invented worlds with invented people. The folder says FICTION because it is.",
+    body: "Original heist stories written and narrated by the desk, crews, scores, double-crosses, including the serialized piece <strong>“The Tenth Painting.”</strong> These are invented worlds with invented people. The folder says FICTION because it is.",
     note: "METHOD: No real events, no real people, no borrowed footage. Story first, labeled always."
   },
   {
     file: "EXHIBIT C / THE WIDER BEAT",
     title: "Case Notes",
-    body: "The rest of the gaming world, worked the same way: launches, studios, and stories big enough to earn a folder — including launch-week coverage beyond the GTA file when a game demands the full board treatment.",
-    note: "METHOD: Same discipline as Exhibit A — official sources for facts, labels for everything else."
+    body: "The rest of the gaming world, worked the same way: launches, studios, and stories big enough to earn a folder, including launch-week coverage beyond the GTA file when a game demands the full board treatment.",
+    note: "METHOD: Same discipline as Exhibit A, official sources for facts, labels for everything else."
   }
 ];
 
@@ -133,7 +133,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
 })();
 
 /* ===== Case Files render =====
-   (Add guides in the CASE_FILES array at the top of this file — see the comment there.) */
+   (Add guides in the CASE_FILES array at the top of this file , see the comment there.) */
 (function () {
   var grid = document.getElementById('caseGrid');
   if (!grid) return;
@@ -152,7 +152,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   });
 })();
 
-/* Brand banner parallax — the banner leans toward the visitor pointer. */
+/* Brand banner parallax , the banner leans toward the visitor pointer. */
 (function () {
   var strip = document.querySelector(".banner-strip");
   if (!strip) return;
@@ -169,7 +169,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   strip.addEventListener("pointerleave", function () { img.style.transform = ""; img.style.animation = ""; });
 })();
 
-/* Merch view toggle — flip a garment card between its front and back print. */
+/* Merch view toggle , flip a garment card between its front and back print. */
 (function () {
   document.querySelectorAll(".view-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -186,7 +186,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   });
 })();
 
-/* Highlight voting — one pick per showcase, saved on this device (localStorage). */
+/* Highlight voting , one pick per showcase, saved on this device (localStorage). */
 (function () {
   var wall = document.getElementById("highlights");
   if (!wall) return;
@@ -247,7 +247,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   paint();
 })();
 
-/* Banner scroll parallax — rAF-driven drift, layered under the pointer tilt via the
+/* Banner scroll parallax , rAF-driven drift, layered under the pointer tilt via the
    standalone translate property so the two never fight over transform. */
 (function () {
   var strip = document.querySelector(".banner-strip");
@@ -271,7 +271,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   drift();
 })();
 
-/* Launch checklist — pre-load ticks save on this device (localStorage).
+/* Launch checklist , pre-load ticks save on this device (localStorage).
    Locked play steps are disabled in the markup and never counted. */
 (function () {
   var section = document.getElementById("launch-checklist");
@@ -311,7 +311,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   paint();
 })();
 
-/* Merch lightbox — click a design for the large view; front/back flip where a back print exists. */
+/* Merch lightbox , click a design for the large view; front/back flip where a back print exists. */
 (function () {
   var box = document.getElementById("merchLightbox");
   if (!box) return;
