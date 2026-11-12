@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Heist HQ 365 — The Case File on Gaming's Biggest Stories</title>
+<meta name="description" content="Heist HQ 365: GTA VI coverage and commentary, original heist fiction, and gaming case notes — filed 365 days a year. Entertainment only. Not affiliated with Rockstar Games." />
+<meta name="theme-color" content="#0a0c10" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Heist HQ 365 — Every Story Is a Case File" />
+<meta property="og:description" content="GTA VI commentary, heist fiction, and gaming case notes. Entertainment only. Not affiliated with Rockstar Games." />
+<meta property="og:site_name" content="Heist HQ 365" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- NAV -->
+<header class="nav">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="Heist HQ 365 home">
+      <img class="brand-img" src="assets/brand-image.png" alt="" aria-hidden="true" onerror="this.remove()"><span class="brand-mark" aria-hidden="true">▣</span> HEIST HQ <span class="red">365</span>
+    </a>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <a href="#board">Evidence Board</a>
+      <a href="#file">The Confirmed File</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#cases">Case Files</a>
+      <a href="#guide">Guide</a>
+      <a href="#launch-checklist">Launch Checklist</a>
+      <a href="#redeem">Redeem</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#merch">Merch</a>
+      <a class="btn btn-red nav-cta" href="https://www.youtube.com/@Heisthq365official" target="_blank" rel="noopener">Watch on YouTube</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+<a id="top"></a>
+
+<main id="main">
+
+<!-- HERO: the case header -->
+<section class="hero">
+  <div class="wrap">
+    <div class="case-head reveal">
+      <span>CASE NO. 365-001</span><span>SUBJECT: GAMING'S BIGGEST STORIES</span><span>STATUS: <strong class="red">OPEN</strong></span>
+    </div>
+    <h1 class="reveal">Every story is<br/>a <span class="red">case file.</span></h1>
+    <p class="lede reveal">Heist HQ 365 works the gaming beat like a detective board: GTA VI coverage and commentary pinned piece by piece, original heist fiction from the vault, and case notes on the wider gaming world — filed 365 days a year. Confirmed facts get stamped. Rumors get labeled. Nothing gets invented.</p>
+    <div class="hero-cta reveal">
+      <a class="btn btn-red" href="#board">Open the evidence board</a>
+      <a class="btn btn-ghost" href="#file">Read the confirmed file</a>
+    </div>
+    <p class="trust-note reveal">Entertainment only. Not affiliated with Rockstar Games.</p>
+  </div>
+</section>
+
+<!-- THE BRIEF -->
+<!-- BRAND BANNER — interactive: drop the brand's original banner at assets/banner.jpg -->
+<section class="banner-strip" aria-label="Heist HQ 365 banner">
+  <img class="banner-img" src="assets/banner.jpg" alt="The official Heist HQ 365 banner" onerror="this.closest('.banner-strip').remove()">
+  <span class="banner-chip">Heist HQ 365</span>
+</section>
+
+<section id="brief" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The brief</p>
+      <h2>How this desk works.</h2>
+      <p>Trailers get read frame by frame. Official statements get filed as fact. Community theories get a red string and a RUMOR tag — fun to follow, never passed off as truth. And when the desk writes fiction, it says FICTION on the folder. That's the whole method: everything on the board is labeled as what it actually is.</p>
+    </div>
+    <div class="rules-row">
+      <div class="rule reveal"><span class="rule-num">365</span><span class="rule-lbl">days a year, the board stays up</span></div>
+      <div class="rule reveal"><span class="rule-num">2</span><span class="rule-lbl">labels that matter: CONFIRMED and RUMOR</span></div>
+      <div class="rule reveal"><span class="rule-num">0</span><span class="rule-lbl">leaks, datamines, or invented "facts"</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE BOARD: interactive -->
+<section id="board">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Interactive · The evidence board</p>
+      <h2>Three exhibits. Pin one open.</h2>
+      <p>The desk's standing lanes, pinned to the board. Select an exhibit to pull its file.</p>
+    </div>
+    <div class="exhibits reveal" role="group" aria-label="Content exhibits">
+      <button type="button" class="exhibit active" data-exhibit="0" aria-pressed="true">
+        <span class="pin" aria-hidden="true"></span>
+        <span class="exhibit-id">EXHIBIT A</span>
+        <span class="exhibit-name">The GTA VI Watch</span>
+        <span class="exhibit-sub">Coverage &amp; commentary</span>
+      </button>
+      <button type="button" class="exhibit" data-exhibit="1" aria-pressed="false">
+        <span class="pin" aria-hidden="true"></span>
+        <span class="exhibit-id">EXHIBIT B</span>
+        <span class="exhibit-name">The Fiction File</span>
+        <span class="exhibit-sub">Original heist stories</span>
+      </button>
+      <button type="button" class="exhibit" data-exhibit="2" aria-pressed="false">
+        <span class="pin" aria-hidden="true"></span>
+        <span class="exhibit-id">EXHIBIT C</span>
+        <span class="exhibit-name">Case Notes</span>
+        <span class="exhibit-sub">The wider gaming beat</span>
+      </button>
+    </div>
+    <article class="exhibit-panel reveal" aria-live="polite">
+      <p class="panel-file" id="exFile">EXHIBIT A / ACTIVE LANE</p>
+      <h3 id="exTitle">The GTA VI Watch</h3>
+      <p id="exBody"></p>
+      <p class="panel-note" id="exNote"></p>
+    </article>
+  </div>
+</section>
+
+<!-- THE CONFIRMED FILE: redaction reveals -->
+<section id="file" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Interactive · Declassify</p>
+      <h2>The confirmed file — with the rumors still in it.</h2>
+      <p>Click a redacted bar to declassify the line. Every line carries its label after reveal: <span class="tag tag-confirmed">CONFIRMED</span> means Rockstar or an official source said it. <span class="tag tag-rumor">RUMOR</span> means the internet said it — interesting, tracked, and never filed as fact.</p>
+    </div>
+    <ul class="file-list reveal">
+      <li>
+        <p>The board is set in the state of <button type="button" class="redact" data-reveal="Leonida — home of Vice City" aria-label="Declassify: the game's setting">████████</button> <span class="tag tag-confirmed" hidden>CONFIRMED · Official trailers</span></p>
+      </li>
+      <li>
+        <p>Two leads carry the story: Lucia Caminos and <button type="button" class="redact" data-reveal="Jason Duval" aria-label="Declassify: the second protagonist">████████</button> <span class="tag tag-confirmed" hidden>CONFIRMED · Official trailers</span></p>
+      </li>
+      <li>
+        <p>The date currently on the board: <button type="button" class="redact" data-reveal="November 19, 2026" aria-label="Declassify: the release date">████████</button> <span class="tag tag-confirmed" hidden>CONFIRMED · Rockstar announcement</span></p>
+      </li>
+      <li>
+        <p>Community mapping projects estimate the map at roughly <button type="button" class="redact" data-reveal="twice the size of GTA V's" aria-label="Declassify: the map size estimate">████████</button> <span class="tag tag-rumor" hidden>RUMOR · Community estimate — not Rockstar-confirmed</span></p>
+      </li>
+      <li>
+        <p>Viral posts claim the game holds <button type="button" class="redact" data-reveal="700+ enterable interiors" aria-label="Declassify: the interiors claim">████████</button> <span class="tag tag-rumor" hidden>RUMOR · Unverified — no official source</span></p>
+      </li>
+    </ul>
+    <p class="file-foot reveal">That's the discipline: a rumor doesn't become a fact because it got shared a million times. It stays behind the bar until an official source lifts it.</p>
+  </div>
+</section>
+
+<!-- TIMELINE: filterable -->
+<section id="timeline">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">The board, chronologically</p>
+      <h2>GTA VI: the timeline so far.</h2>
+      <p>Filter the file by category. Rumor Watch entries are the desk's open questions — labeled, tracked, unresolved.</p>
+    </div>
+    <div class="filters reveal" role="group" aria-label="Filter timeline by category">
+      <button type="button" class="filter active" data-filter="all">All</button>
+      <button type="button" class="filter" data-filter="release">Release</button>
+      <button type="button" class="filter" data-filter="setting">Setting</button>
+      <button type="button" class="filter" data-filter="characters">Characters</button>
+      <button type="button" class="filter" data-filter="map">Map &amp; World</button>
+      <button type="button" class="filter" data-filter="rumor">Rumor Watch</button>
+    </div>
+    <ol class="tl reveal" id="tlList">
+      <li data-cat="release"><span class="tl-date">Dec 2023</span><div><p class="tl-tags"><span class="tag tag-confirmed">CONFIRMED</span></p><h3>Trailer 1 breaks cover</h3><p>Rockstar's first look confirms Leonida and Lucia, with a 2025 window that has since moved twice.</p></div></li>
+      <li data-cat="characters"><span class="tl-date">Dec 2023</span><div><p class="tl-tags"><span class="tag tag-confirmed">CONFIRMED</span></p><h3>Lucia takes the lead</h3><p>The first trailer centers Lucia Caminos — the series' first female lead in the modern era.</p></div></li>
+      <li data-cat="release"><span class="tl-date">May 2025</span><div><p class="tl-tags"><span class="tag tag-confirmed">CONFIRMED</span></p><h3>Trailer 2, captured on PS5</h3><p>The second trailer lands with Rockstar noting the footage was captured on PlayStation 5 — and the date moves to May 26, 2026.</p></div></li>
+      <li data-cat="characters"><span class="tl-date">May 2025</span><div><p class="tl-tags"><span class="tag tag-confirmed">CONFIRMED</span></p><h3>Jason Duval, named</h3><p>Trailer 2 and Rockstar's character pages put Jason alongside Lucia as co-lead.</p></div></li>
+      <li data-cat="setting"><span class="tl-date">May 2025</span><div><p class="tl-tags"><span class="tag tag-confirmed">CONFIRMED</span></p><h3>Leonida beyond Vice City</h3><p>Official material maps a wider state: the Leonida Keys, Port Gellhorn, Ambrosia, Mount Kalaga, and the Grassrivers.</p></div></li>
+      <li data-cat="release"><span class="tl-date">Nov 2025</span><div><p class="tl-tags"><span class="tag tag-confirmed">CONFIRMED</span></p><h3>The date is set: November 19, 2026</h3><p>Rockstar moves launch to November 19, 2026. The desk treats this as the operative date until Rockstar says otherwise.</p></div></li>
+      <li data-cat="map"><span class="tl-date">Ongoing</span><div><p class="tl-tags"><span class="tag tag-rumor">RUMOR</span></p><h3>Mapping project: roughly 2× GTA V</h3><p>Community mappers stitching trailer frames estimate a landmass near double GTA V's. Careful work — still an estimate, filed as such.</p></div></li>
+      <li data-cat="map"><span class="tl-date">Oct 2026</span><div><p class="tl-tags"><span class="tag tag-report">REPORT</span></p><h3>Edge goes inside Rockstar North</h3><p>Edge magazine's 16-page cover feature (issue 430) reports new detail from the studio — reported, quoted, and labeled as reporting, not confirmation.</p></div></li>
+      <li data-cat="rumor"><span class="tl-date">Ongoing</span><div><p class="tl-tags"><span class="tag tag-rumor">RUMOR</span></p><h3>The "700+ interiors" claim</h3><p>The most-shared number in the fandom — and still without an official source. It stays on Rumor Watch until one exists.</p></div></li>
+    </ol>
+    <p class="tl-empty" id="tlEmpty" hidden>No entries in this category yet — the file is still open.</p>
+  </div>
+</section>
+
+<!-- CASE FILES (Guides hub)
+     HOW TO ADD A GUIDE: add one object to the CASE_FILES array at the top of script.js
+     (title, dek, category, date, tag). The cards below render automatically.
+     Every guide is a companion to the video coverage — keep the CONFIRMED/RUMOR discipline inside them. -->
+<section id="cases" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Guides · Case Files</p>
+      <h2>Case files: the companion guides.</h2>
+      <p>Written companions to the video coverage — the board's method, the confirmed file, and how to read coverage without getting played by it.</p>
+    </div>
+    <div class="case-grid" id="caseGrid"></div>
+    <noscript><p class="dim">The Case Files index loads with JavaScript enabled. The guides' video companions live on our YouTube channel.</p></noscript>
+  </div>
+</section>
+
+<!-- START HERE -->
+<section id="start">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Start here</p>
+      <h2>New to the desk? Open these first.</h2>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><a href="https://www.youtube.com/@Heisthq365official" target="_blank" rel="noopener"><span class="step-n" aria-hidden="true">1</span><h3>The flagship breakdown</h3><p>Start with the channel's pinned GTA VI explainer — the whole board in one sitting.</p></a></li>
+      <li class="step reveal"><a href="https://www.youtube.com/@Heisthq365official" target="_blank" rel="noopener"><span class="step-n" aria-hidden="true">2</span><h3>The newest case</h3><p>The latest upload is always the freshest evidence — work backward from there.</p></a></li>
+      <li class="step reveal"><a href="https://www.youtube.com/@Heisthq365official" target="_blank" rel="noopener"><span class="step-n" aria-hidden="true">3</span><h3>The fiction file</h3><p>Close with a story: the desk's original heist fiction, labeled FICTION on the folder.</p></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- THE GUIDE -->
+<section id="guide" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Guides · The Desk Manual</p>
+      <h2>The Heist guide: read the case like the desk.</h2>
+      <p>The field manual for following the biggest story in gaming without getting played by it. Four habits, in the order the desk uses them.</p>
+    </div>
+    <ol class="steps">
+      <li class="step reveal"><a href="#file"><span class="step-n" aria-hidden="true">1</span><h3>Start with what is confirmed</h3><p>The confirmed file separates what Rockstar has actually said from everything else. Redacted lines declassify on click — each one is a fact with a source, not a vibe.</p></a></li>
+      <li class="step reveal"><a href="#timeline"><span class="step-n" aria-hidden="true">2</span><h3>Check the date on everything</h3><p>The timeline is the spine of the case. Every claim gets pinned to when it was really said, because a two-year-old quote in a new thumbnail is how rumors are born.</p></a></li>
+      <li class="step reveal"><a href="#board"><span class="step-n" aria-hidden="true">3</span><h3>Weigh the exhibit</h3><p>The evidence board grades every item — confirmed, reported, rumored — and the grade travels with the claim wherever the desk repeats it. No grade, no weight.</p></a></li>
+      <li class="step reveal"><a href="#brief"><span class="step-n" aria-hidden="true">4</span><h3>Know the desk's rules</h3><p>Commentary over credited official material and our own gameplay, only. Nothing here is ever dressed up as leaked or unreleased footage — if a video claims that, it is not ours, and it is not real until Rockstar says so.</p></a></li>
+    </ol>
+  </div>
+</section>
+
+<!-- LAUNCH DATES: official strip — only dates Rockstar has set, each linked to its post -->
+<section id="launch-dates" class="dates-band">
+  <div class="wrap">
+    <p class="eyebrow">Launch dates · Official</p>
+    <div class="dates-row">
+      <a class="chip" href="https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10" target="_blank" rel="noopener">Pre-load opened — <span class="date-when">Nov 10</span></a>
+      <a class="chip" href="https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10" target="_blank" rel="noopener">Code-in-box copies in stores — <span class="date-when">Nov 12</span></a>
+      <a class="chip" href="https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026?embed=true" target="_blank" rel="noopener">Launch — <span class="date-when">Nov 19</span></a>
+    </div>
+    <p class="dates-note">Every date here links to the Rockstar post that set it.</p>
+  </div>
+</section>
+
+<!-- LAUNCH CHECKLIST: pre-load steps are open now; play steps stay locked until launch.
+     Ticks save on this device (localStorage, key: heist-launch-checklist). -->
+<section id="launch-checklist">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Interactive · Launch readiness</p>
+      <h2>The launch checklist.</h2>
+      <p>Everything that can be done before launch night, in order. The pre-load steps are open now. The play steps stay locked until the game unlocks — midnight local time, November 19. Ticks save on this device.</p>
+      <p class="checklist-progress" id="checklistProgress" aria-live="polite">0 of 5 ready</p>
+    </div>
+    <ul class="check-list reveal">
+      <li class="check-item">
+        <label class="check-label"><input type="checkbox" data-check="firmware"> <span class="check-text">Update your console firmware</span></label>
+        <p class="check-note">Take the latest system update now, not on launch night.</p>
+      </li>
+      <li class="check-item">
+        <label class="check-label"><input type="checkbox" data-check="space"> <span class="check-text">Clear space for the install</span></label>
+        <p class="check-note">The install can take <a href="https://www.rockstargames.com/newswire/article/k4ak9okk485712/grand-theft-auto-vi-pre-load-begins-on-november-10" target="_blank" rel="noopener">up to 212 GB depending on your device</a> — Rockstar's wording, from their pre-load post.</p>
+      </li>
+      <li class="check-item">
+        <label class="check-label"><input type="checkbox" data-check="redeem"> <span class="check-text">Redeem your code, if you bought the box</span></label>
+        <p class="check-note">Code-in-box copies carry a download code instead of a disc — <a href="#redeem">the redemption guide</a> walks it through, store by store.</p>
+      </li>
+      <li class="check-item">
+        <label class="check-label"><input type="checkbox" data-check="preload"> <span class="check-text">Start the pre-load</span></label>
+        <p class="check-note">Pre-load opened November 10. PlayStation opens at midnight local time; Xbox opens at midnight GMT.</p>
+      </li>
+      <li class="check-item">
+        <label class="check-label"><input type="checkbox" data-check="updates"> <span class="check-text">Check for game updates before launch night</span></label>
+        <p class="check-note">One last check the evening before, so launch night is play, not patching.</p>
+      </li>
+      <li class="check-item locked">
+        <label class="check-label"><input type="checkbox" data-check="launch" disabled> <span class="check-main"><span class="check-text">Launch the game</span><span class="lock-note">Unlocks at launch — midnight local, Nov 19</span></span></label>
+      </li>
+      <li class="check-item locked">
+        <label class="check-label"><input type="checkbox" data-check="session" disabled> <span class="check-main"><span class="check-text">First session setup</span><span class="lock-note">Unlocks at launch — midnight local, Nov 19</span></span></label>
+      </li>
+    </ul>
+    <p class="checklist-stamp" id="checklistStamp" hidden>Declassified — launch ready</p>
+    <p class="dim checklist-foot">Ticks are saved on this device only. Locked steps open at launch — midnight local, Nov 19.</p>
+  </div>
+</section>
+
+<!-- REDEMPTION GUIDE: how to redeem the download code inside code-in-box copies. How-to only — no codes, no promos. -->
+<section id="redeem" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Guides · Code in the box</p>
+      <h2>Got the box? Redeem it</h2>
+      <p>Some physical copies are code-in-box editions: no disc inside, just a printed download code. The code is the game — redeem it in your console's store and the download is yours. Here is the route on each system.</p>
+    </div>
+    <div class="case-grid redeem-grid">
+      <article class="case-card reveal">
+        <h3>PlayStation</h3>
+        <ol class="redeem-steps">
+          <li>Open the PlayStation Store.</li>
+          <li>Select your profile icon at the top of the screen.</li>
+          <li>Choose <strong>Redeem Code</strong>.</li>
+          <li>Enter the 12-character code exactly as printed in the box.</li>
+          <li>Confirm — the game lands in your library and the download can start.</li>
+        </ol>
+      </article>
+      <article class="case-card reveal">
+        <h3>Xbox</h3>
+        <ol class="redeem-steps">
+          <li>Open the Microsoft Store.</li>
+          <li>Open your profile menu and choose <strong>Redeem</strong>.</li>
+          <li>Enter the code exactly as printed in the box.</li>
+          <li>Confirm — the game lands in your library and the download can start.</li>
+        </ol>
+      </article>
+    </div>
+    <p class="dim redeem-foot">Keep the printed code private — once a code is redeemed, it lives on that account. If a code fails, check every character against the insert before retyping; the stores read them exactly.</p>
+  </div>
+</section>
+
+<!-- HIGHLIGHTS -->
+<section id="highlights">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Community · The Tip Line</p>
+      <h2>Highlights: featured from the tip line.</h2>
+      <p>Reader submissions the desk has graded and filed — timeline catches, exhibit upgrades with real sources, and original fiction filed under its label in big letters. Nothing is featured as fact without a checkable source behind it. The wall is voted: visitors back the file that earns it, one vote per showcase.</p>
+    </div>
+    <div class="case-grid">
+      <article class="case-card reveal">
+        <h3>Sample — The timeline catch</h3>
+        <p>A reader spots a recycled quote making the rounds as breaking news. The desk verifies the original date, pins it to the timeline, and features the catch with the reader's name on it.</p>
+      <div class="vote-row">
+        <button type="button" class="vote-btn" data-vote="1" aria-pressed="false" disabled>Voting opens with real submissions</button>
+        <span class="vote-state" aria-live="polite"></span>
+      </div>
+      </article>
+      <article class="case-card reveal">
+        <h3>Sample — The exhibit upgrade</h3>
+        <p>A submission brings a primary source — a filing, a dated official post — strong enough to move an item from rumored to reported. The source is shown, always, so anyone can check the desk's work.</p>
+      <div class="vote-row">
+        <button type="button" class="vote-btn" data-vote="2" aria-pressed="false" disabled>Voting opens with real submissions</button>
+        <span class="vote-state" aria-live="polite"></span>
+      </div>
+      </article>
+      <article class="case-card reveal">
+        <h3>Sample — The fiction file</h3>
+        <p>An original heist story from a reader, featured under the FICTION label. Fiction is welcome at this desk; dressing fiction up as fact is the one permanent ban.</p>
+      <div class="vote-row">
+        <button type="button" class="vote-btn" data-vote="3" aria-pressed="false" disabled>Voting opens with real submissions</button>
+        <span class="vote-state" aria-live="polite"></span>
+      </div>
+      </article>
+    </div>
+    <p>Tips and submissions run through the channel — the follow links below are the door. The desk grades before it files, and credit runs with the work.</p>
+    <p class="vote-note">Your vote is saved on this device. Community voting opens at launch.</p>
+  </div>
+</section>
+
+<!-- MERCHANT -->
+<!-- MERCHANT SLOT: design images supplied by Jose — front view assets/merch-shirt-front.jpg and assets/merch-sweater-front.jpg; back view assets/merch-shirt-back.jpg and assets/merch-sweater-back.jpg for designs with a back print (the Back toggle hides itself when no back image exists). Prices and store links wire in when the merch store ships. -->
+<section id="merch" class="band">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow">Merchant</p>
+      <h2>Wear the case.</h2>
+      <p>The HQ's designs, on the shirt and the sweater. Original artwork only — no publisher art, no game logos. Designs with a front and back print show both views — flip the card. Sales open with the store.</p>
+    </div>
+    <div class="case-grid">
+      <article class="case-card reveal">
+        <div class="merch-views">
+        <img class="merch-img view-front" src="assets/merch-shirt-front.jpg" alt="The Heist HQ 365 shirt design, front view" onerror="this.remove()">
+        <img class="merch-img view-back" src="assets/merch-shirt-back.jpg" alt="The Heist HQ 365 shirt design, back view" hidden onerror="this.closest('.merch-views').classList.add('no-back'); this.remove()">
+      </div>
+      <div class="view-toggle" role="group" aria-label="Shirt views">
+        <button type="button" class="view-btn on" data-view="front">Front</button>
+        <button type="button" class="view-btn" data-view="back">Back</button>
+      </div>
+        <h3>The Shirt</h3>
+      </article>
+      <article class="case-card reveal">
+        <div class="merch-views">
+        <img class="merch-img view-front" src="assets/merch-sweater-front.jpg" alt="The Heist HQ 365 sweater design, front view" onerror="this.remove()">
+        <img class="merch-img view-back" src="assets/merch-sweater-back.jpg" alt="The Heist HQ 365 sweater design, back view" hidden onerror="this.closest('.merch-views').classList.add('no-back'); this.remove()">
+      </div>
+      <div class="view-toggle" role="group" aria-label="Sweater views">
+        <button type="button" class="view-btn on" data-view="front">Front</button>
+        <button type="button" class="view-btn" data-view="back">Back</button>
+      </div>
+        <h3>The Sweater</h3>
+      </article>
+    </div>
+    <p>Drop news and design requests run through the follow links below.</p>
+  </div>
+</section>
+
+<!-- FUTURE FORM SLOT: when the GCP funnel endpoint ships, the email-capture form wires in here.
+     Until then there is deliberately NO form on this page — the follow links below are the only call to action. -->
+
+<!-- FOLLOW -->
+<div class="proof">
+  <div class="wrap row">
+    <span class="label">Follow the desk — Heist HQ 365</span>
+    <div class="channels">
+      <a class="chip" href="https://www.youtube.com/@Heisthq365official" target="_blank" rel="noopener">▶ YouTube</a>
+      <a class="chip" href="https://www.instagram.com/heisthq365official" target="_blank" rel="noopener">◎ Instagram</a>
+      <a class="chip" href="https://www.tiktok.com/@heisthq365" target="_blank" rel="noopener">♪ TikTok</a>
+      <a class="chip" href="https://www.snapchat.com/add/heisthq365" target="_blank" rel="noopener">👻 Snapchat</a>
+      <a class="chip" href="https://www.threads.net/@heisthq365official" target="_blank" rel="noopener">@ Threads</a>
+    </div>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">▣</span> HEIST HQ <span class="red">365</span></div>
+      <nav class="foot-links" aria-label="Footer">
+        <a href="https://www.youtube.com/@Heisthq365official" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://www.instagram.com/heisthq365official" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.tiktok.com/@heisthq365" target="_blank" rel="noopener">TikTok</a>
+        <a href="https://www.snapchat.com/add/heisthq365" target="_blank" rel="noopener">Snapchat</a>
+        <a href="https://www.threads.net/@heisthq365official" target="_blank" rel="noopener">Threads</a>
+      </nav>
+    </div>
+    <p class="disclaimer">Entertainment only. Not affiliated with Rockstar Games. Heist HQ 365 is an independent commentary and entertainment channel. Grand Theft Auto, GTA, and Rockstar Games are trademarks of Take-Two Interactive; trailer footage and official material referenced in our coverage are used for commentary and criticism with on-screen credit to Rockstar Games. Speculative content is labeled [CONCEPT] or [RUMOR] and is never presented as confirmed fact. Original fiction published by this channel is exactly that — fiction.</p>
+    <p class="build-label">Case status: open. New evidence filed on the channel first.</p>
+  </div>
+</footer>
+
+<!-- MERCH LIGHTBOX: large view of a design, with the front/back flip where a back print exists -->
+<div class="lightbox" id="merchLightbox" hidden role="dialog" aria-modal="true" aria-label="Merch design viewer">
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close viewer">✕</button>
+  <figure class="lightbox-figure">
+    <img class="lightbox-img" id="lightboxImg" src="" alt="">
+    <figcaption class="lightbox-cap" id="lightboxCap"></figcaption>
+    <div class="view-toggle lightbox-toggle" id="lightboxToggle" role="group" aria-label="Design views">
+      <button type="button" class="view-btn on" data-lb-view="front">Front</button>
+      <button type="button" class="view-btn" data-lb-view="back">Back</button>
+    </div>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
