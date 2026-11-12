@@ -133,7 +133,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
 })();
 
 /* ===== Case Files render =====
-   (Add guides in the CASE_FILES array at the top of this file , see the comment there.) */
+   (Add guides in the CASE_FILES array at the top of this file, see the comment there.) */
 (function () {
   var grid = document.getElementById('caseGrid');
   if (!grid) return;
@@ -152,7 +152,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   });
 })();
 
-/* Brand banner parallax , the banner leans toward the visitor pointer. */
+/* Brand banner parallax, the banner leans toward the visitor pointer. */
 (function () {
   var strip = document.querySelector(".banner-strip");
   if (!strip) return;
@@ -169,7 +169,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   strip.addEventListener("pointerleave", function () { img.style.transform = ""; img.style.animation = ""; });
 })();
 
-/* Merch view toggle , flip a garment card between its front and back print. */
+/* Merch view toggle, flip a garment card between its front and back print. */
 (function () {
   document.querySelectorAll(".view-btn").forEach(function (btn) {
     btn.addEventListener("click", function () {
@@ -186,7 +186,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   });
 })();
 
-/* Highlight voting , one pick per showcase, saved on this device (localStorage). */
+/* Highlight voting, one pick per showcase, saved on this device (localStorage). */
 (function () {
   var wall = document.getElementById("highlights");
   if (!wall) return;
@@ -247,7 +247,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   paint();
 })();
 
-/* Banner scroll parallax , rAF-driven drift, layered under the pointer tilt via the
+/* Banner scroll parallax, rAF-driven drift, layered under the pointer tilt via the
    standalone translate property so the two never fight over transform. */
 (function () {
   var strip = document.querySelector(".banner-strip");
@@ -271,7 +271,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   drift();
 })();
 
-/* Launch checklist , pre-load ticks save on this device (localStorage).
+/* Launch checklist, pre-load ticks save on this device (localStorage).
    Locked play steps are disabled in the markup and never counted. */
 (function () {
   var section = document.getElementById("launch-checklist");
@@ -311,7 +311,7 @@ var reduceHH = window.matchMedia && window.matchMedia('(prefers-reduced-motion: 
   paint();
 })();
 
-/* Merch lightbox , click a design for the large view; front/back flip where a back print exists. */
+/* Merch lightbox, click a design for the large view; front/back flip where a back print exists. */
 (function () {
   var box = document.getElementById("merchLightbox");
   if (!box) return;
